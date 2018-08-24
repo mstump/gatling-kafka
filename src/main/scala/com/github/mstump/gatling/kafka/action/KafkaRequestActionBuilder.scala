@@ -1,7 +1,7 @@
-package com.github.mnogu.gatling.kafka.action
+package com.github.mstump.gatling.kafka.action
 
-import com.github.mnogu.gatling.kafka.protocol.{KafkaComponents, KafkaProtocol}
-import com.github.mnogu.gatling.kafka.request.builder.KafkaAttributes
+import com.github.mstump.gatling.kafka.protocol.{KafkaComponents, KafkaProtocol}
+import com.github.mstump.gatling.kafka.request.builder.KafkaAttributes
 import io.gatling.core.action.Action
 import io.gatling.core.action.builder.ActionBuilder
 import io.gatling.core.structure.ScenarioContext

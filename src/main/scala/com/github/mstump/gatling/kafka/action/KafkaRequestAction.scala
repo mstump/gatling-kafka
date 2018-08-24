@@ -1,7 +1,7 @@
-package com.github.mnogu.gatling.kafka.action
+package com.github.mstump.gatling.kafka.action
 
-import com.github.mnogu.gatling.kafka.protocol.KafkaProtocol
-import com.github.mnogu.gatling.kafka.request.builder.KafkaAttributes
+import com.github.mstump.gatling.kafka.protocol.KafkaProtocol
+import com.github.mstump.gatling.kafka.request.builder.KafkaAttributes
 import io.gatling.core.action.{Action, ExitableAction}
 import io.gatling.commons.stats.{KO, OK}
 import io.gatling.core.session._

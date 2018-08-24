@@ -1,6 +1,6 @@
-package com.github.mnogu.gatling.kafka.request.builder
+package com.github.mstump.gatling.kafka.request.builder
 
-import com.github.mnogu.gatling.kafka.action.KafkaRequestActionBuilder
+import com.github.mstump.gatling.kafka.action.KafkaRequestActionBuilder
 import io.gatling.core.session._
 
 case class KafkaAttributes[K,V]( requestName: Expression[String],

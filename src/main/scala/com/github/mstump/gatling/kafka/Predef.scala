@@ -1,7 +1,7 @@
-package com.github.mnogu.gatling.kafka
+package com.github.mstump.gatling.kafka
 
-import com.github.mnogu.gatling.kafka.protocol.KafkaProtocolBuilder
-import com.github.mnogu.gatling.kafka.request.builder.KafkaRequestBuilder
+import com.github.mstump.gatling.kafka.protocol.KafkaProtocolBuilder
+import com.github.mstump.gatling.kafka.request.builder.KafkaRequestBuilder
 import io.gatling.core.config.GatlingConfiguration
 import io.gatling.core.session.Expression
 

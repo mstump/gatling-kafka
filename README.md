@@ -63,8 +63,8 @@ to the jar file, you also need to copy kafka-clients library to `lib` directory:
     $ cd /path/to/gatling-charts-highcharts-bundle-2.2.*
     $ vi user-files/simulations/KafkaSimulation.scala
 
-You can find sample simulation files in the [test directory](src/test/scala/com/github/mnogu/gatling/kafka/test).
-Among these files, [BasicSimulation.scala](src/test/scala/com/github/mnogu/gatling/kafka/test/BasicSimulation.scala) would be a good start point.
+You can find sample simulation files in the [test directory](src/test/scala/com/github/mstump/gatling/kafka/test).
+Among these files, [BasicSimulation.scala](src/test/scala/com/github/mstump/gatling/kafka/test/BasicSimulation.scala) would be a good start point.
 Make sure that you replace `BasicSimulation` with `KafkaSimulation` in `BasicSimulation.scala`
 if your simulation filename is `KafkaSimulation.scala`.
 

@@ -1,4 +1,4 @@
-package com.github.mnogu.gatling.kafka.protocol
+package com.github.mstump.gatling.kafka.protocol
 
 import io.gatling.core.protocol.ProtocolComponents
 import io.gatling.core.session.Session

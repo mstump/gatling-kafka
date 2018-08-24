@@ -1,10 +1,10 @@
-package com.github.mnogu.gatling.kafka.test
+package com.github.mstump.gatling.kafka.test
 
 import io.gatling.core.Predef._
 import org.apache.kafka.clients.producer.ProducerConfig
 import scala.concurrent.duration._
 
-import com.github.mnogu.gatling.kafka.Predef._
+import com.github.mstump.gatling.kafka.Predef._
 
 class FeederByteArraySimulation extends Simulation {
   val kafkaConf = kafka

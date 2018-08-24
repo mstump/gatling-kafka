@@ -1,4 +1,4 @@
-package com.github.mnogu.gatling.kafka.protocol
+package com.github.mstump.gatling.kafka.protocol
 
 import akka.actor.ActorSystem
 import io.gatling.core.CoreComponents

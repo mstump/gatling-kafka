@@ -1,7 +1,9 @@
 apply plugin: 'scala'
+apply plugin: 'maven'
 apply plugin: 'maven-publish'
 
-group = 'com.vorstella'
+group = 'com.github.mstump'
+version = '0.1.1'
 sourceCompatibility = 1.8
 targetCompatibility = 1.8
 
@@ -10,7 +12,6 @@ repositories {
   jcenter()
   maven { url "http://repo.maven.apache.org/maven2" }
   maven { url "https://dl.bintray.com/palantir/releases" }
-  maven { url "gcs://vorstella-maven-prod" }
 }
 
 dependencies {
@@ -20,4 +21,34 @@ dependencies {
   testCompile 'io.gatling:gatling-core:2.3.1'
   testCompile 'org.scalatest:scalatest_2.12:3.0.0'
   testCompile 'junit:junit:4.12'
+}
+
+task sourcesJar(type: Jar, dependsOn: classes) {
+  classifier = 'sources'
+  from sourceSets.main.allSource
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+  classifier = 'javadoc'
+  from javadoc.destinationDir
+}
+
+artifacts {
+  archives sourcesJar
+  archives javadocJar
+}
+
+// To specify a license in the pom:
+install {
+  repositories.mavenInstaller {
+    pom.project {
+      licenses {
+        license {
+          name 'The Apache Software License, Version 2.0'
+          url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+          distribution 'repo'
+        }
+      }
+    }
+  }
 }
