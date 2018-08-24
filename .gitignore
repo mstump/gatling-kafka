@@ -73,3 +73,24 @@ project/plugins/project/
 .settings/*
 
 
+.DS_Store
+# editor files
+*.swp
+*.iml
+.idea
+
+# compilation objects
+target/
+.project
+.settings/
+.classpath
+.gradle
+build
+**/out
+
+# Releases
+releases/
+/keyrings/live/pubring.gpg~
+/keyrings/live/pubring.kbx~
+/keyrings/live/secring.gpg
+/helm/kafka/secrets/prod.yaml
