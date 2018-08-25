@@ -12,17 +12,18 @@ import io.gatling.core.util.NameGen
 import io.gatling.core.stats.message.ResponseTimings
 import org.apache.kafka.clients.producer._
 
+import scala.collection.JavaConverters._
 
-class KafkaRequestAction[K,V]( val producer: KafkaProducer[K,V],
-                               val kafkaAttributes: KafkaAttributes[K,V],
-                               val coreComponents: CoreComponents,
-                               val kafkaProtocol: KafkaProtocol,
-                               val throttled: Boolean,
-                               val next: Action )
+class KafkaProducerRequestAction[K,V](val producer: KafkaProducer[K,V],
+                                      val kafkaAttributes: KafkaAttributes[K,V],
+                                      val coreComponents: CoreComponents,
+                                      val kafkaProtocol: KafkaProtocol,
+                                      val throttled: Boolean,
+                                      val next: Action )
   extends ExitableAction with NameGen {
 
   val statsEngine = coreComponents.statsEngine
-  override val name = genName("kafkaRequest")
+  override val name = genName("kafkaProducerRequest")
 
   override def execute(session: Session): Unit = recover(session) {
 
